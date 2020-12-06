@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "PED-CM-abO"; */
+"PED-CM-abO.normalTitle" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "m17-JN-fuC"; */
+"m17-JN-fuC.normalTitle" = "Старт";
+
+/* Class = "UIButton"; normalTitle = "Score"; ObjectID = "xm2-Rf-BG5"; */
+"xm2-Rf-BG5.normalTitle" = "Рекорды";

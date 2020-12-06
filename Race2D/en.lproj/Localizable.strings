@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Race2D
+
+  Created by Denis Mikheykin on 11/25/20.
+  Copyright © 2020 Denis Mikheykin. All rights reserved.
+*/
+
+// General
+"Back" = "Back";
+"Score" = "Score";
+"Scores" = "Scores";
+
+// GameViewController
+"Race 2D" = "Race 2D";
+"Game Over" = "Game Over";
+"LEFT" = "LEFT";
+"RIGHT" = "RIGHT";
+
+// SettingsViewController
+"Save" = "Save";
+"Settings" = "Settings";
+"Select a car" = "Select a car";
+"Select a barrier" = "Select a barrier";
+"Name" = "Name";
+"Speed" = "Speed";
+"Music" = "Music";
+
+// ScoreViewController
+
+
+

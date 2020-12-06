@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Speed:"; ObjectID = "KXW-RC-lGP"; */
+"KXW-RC-lGP.text" = "Скорость:";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "OyM-vS-WZ5"; */
+"OyM-vS-WZ5.text" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "QOG-Wp-VGg"; */
+"QOG-Wp-VGg.normalTitle" = "Сохранить";
+
+/* Class = "UILabel"; text = "Music:"; ObjectID = "Zvw-Df-fGc"; */
+"Zvw-Df-fGc.text" = "Музыка:";
+
+/* Class = "UILabel"; text = "Select a barrier"; ObjectID = "jbV-GD-cF9"; */
+"jbV-GD-cF9.text" = "Выбор препятствия";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "lQi-VA-nZb"; */
+"lQi-VA-nZb.normalTitle" = "Выйти";
+
+/* Class = "UILabel"; text = "Select a car"; ObjectID = "wLj-RN-7TI"; */
+"wLj-RN-7TI.text" = "Выбор машины";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "whe-Nl-AwL"; */
+"whe-Nl-AwL.text" = "Имя:";

@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Race2D
+
+  Created by Denis Mikheykin on 11/25/20.
+  Copyright © 2020 Denis Mikheykin. All rights reserved.
+*/
+
+// General
+"Back" = "Выйти";
+"Result" = "Результат";
+"Scores" = "Рекорды";
+
+// GameViewController
+"Race 2D" = "Гонки 2D";
+"Game Over" = "Конец игры";
+"LEFT" = "Лево";
+"RIGHT" = "Право";
+
+// SettingsViewController
+"Save" = "Сохранить";
+"Settings" = "Настройки";
+"Select a car" = "Выбор машины";
+"Select a barrier" = "Выбор препятствия";
+"Name" = "Имя";
+"Speed" = "Скорость";
+"Music" = "Музыка";
+
+// ScoreViewController
+
