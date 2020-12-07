@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,14 +29,18 @@
 		A071C72D256AEDAA005661CD /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A071C72C256AEDAA005661CD /* AudioPlayerManager.swift */; };
 		A071C72F256B02D4005661CD /* drive.wav in Resources */ = {isa = PBXBuildFile; fileRef = A071C72E256B02D4005661CD /* drive.wav */; };
 		A071C731256B045F005661CD /* crash.wav in Resources */ = {isa = PBXBuildFile; fileRef = A071C730256B045F005661CD /* crash.wav */; };
+		A0A892E8257EC8C600344AC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A892E7257EC8C600344AC0 /* GoogleService-Info.plist */; };
 		A0AAE4D82541E1C300541B25 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AAE4D72541E1C300541B25 /* Settings.swift */; };
 		A0AAE4FE2542259D00541B25 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AAE4FD2542259D00541B25 /* ExtensionUIView.swift */; };
 		A0AAE5002542357A00541B25 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AAE4FF2542357A00541B25 /* Car.swift */; };
 		A0F579C8254588C5000B23F9 /* ExtensionUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F579C7254588C5000B23F9 /* ExtensionUserDefaults.swift */; };
 		A0F579CA2545B767000B23F9 /* RaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F579C92545B767000B23F9 /* RaceResult.swift */; };
+		CD8624ACE789DD064C133EB6 /* Pods_Race2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3316D0BFFBD795635FEA09 /* Pods_Race2D.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A3316D0BFFBD795635FEA09 /* Pods_Race2D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Race2D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		780A12907B981BC35D455227 /* Pods-Race2D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Race2D.release.xcconfig"; path = "Target Support Files/Pods-Race2D/Pods-Race2D.release.xcconfig"; sourceTree = "<group>"; };
 		A002935F256EB1F9009FF800 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		A0029360256EB1F9009FF800 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A0029364256EBF12009FF800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GameStoryboard.storyboard; sourceTree = "<group>"; };
@@ -66,11 +70,13 @@
 		A071C72C256AEDAA005661CD /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		A071C72E256B02D4005661CD /* drive.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drive.wav; sourceTree = "<group>"; };
 		A071C730256B045F005661CD /* crash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crash.wav; sourceTree = "<group>"; };
+		A0A892E7257EC8C600344AC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0AAE4D72541E1C300541B25 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A0AAE4FD2542259D00541B25 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		A0AAE4FF2542357A00541B25 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		A0F579C7254588C5000B23F9 /* ExtensionUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUserDefaults.swift; sourceTree = "<group>"; };
 		A0F579C92545B767000B23F9 /* RaceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResult.swift; sourceTree = "<group>"; };
+		ADA13FEB627AB25D46A101D8 /* Pods-Race2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Race2D.debug.xcconfig"; path = "Target Support Files/Pods-Race2D/Pods-Race2D.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,17 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8624ACE789DD064C133EB6 /* Pods_Race2D.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7502CB6AC6994515BCD1F001 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADA13FEB627AB25D46A101D8 /* Pods-Race2D.debug.xcconfig */,
+				780A12907B981BC35D455227 /* Pods-Race2D.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		921FF632360F616299C90A9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A3316D0BFFBD795635FEA09 /* Pods_Race2D.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A01A2C0D251BCEB100FAE38C = {
 			isa = PBXGroup;
 			children = (
 				A01A2C18251BCEB100FAE38C /* Race2D */,
 				A01A2C17251BCEB100FAE38C /* Products */,
+				7502CB6AC6994515BCD1F001 /* Pods */,
+				921FF632360F616299C90A9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +153,7 @@
 				A01A2C22251BCEB200FAE38C /* Assets.xcassets */,
 				A01A2C24251BCEB200FAE38C /* LaunchScreen.storyboard */,
 				A01A2C27251BCEB200FAE38C /* Info.plist */,
+				A0A892E7257EC8C600344AC0 /* GoogleService-Info.plist */,
 				A071C728256AED0E005661CD /* click.wav */,
 				A071C72A256AED24005661CD /* soundBack.wav */,
 				A071C72E256B02D4005661CD /* drive.wav */,
@@ -150,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A01A2C2A251BCEB200FAE38C /* Build configuration list for PBXNativeTarget "Race2D" */;
 			buildPhases = (
+				A6B4604079353F7688DA8B63 /* [CP] Check Pods Manifest.lock */,
 				A01A2C12251BCEB100FAE38C /* Sources */,
 				A01A2C13251BCEB100FAE38C /* Frameworks */,
 				A01A2C14251BCEB100FAE38C /* Resources */,
+				272F33E8A039418322D72EAC /* [CP] Embed Pods Frameworks */,
+				A0A892E9257ECBB800344AC0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -207,6 +237,7 @@
 				A002936A256EC066009FF800 /* Localizable.strings in Resources */,
 				A071C72B256AED24005661CD /* soundBack.wav in Resources */,
 				A01A2C26251BCEB200FAE38C /* LaunchScreen.storyboard in Resources */,
+				A0A892E8257EC8C600344AC0 /* GoogleService-Info.plist in Resources */,
 				A01A2C23251BCEB200FAE38C /* Assets.xcassets in Resources */,
 				A071C729256AED0E005661CD /* click.wav in Resources */,
 				A01A2C21251BCEB100FAE38C /* Main.storyboard in Resources */,
@@ -217,6 +248,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		272F33E8A039418322D72EAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Race2D/Pods-Race2D-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Race2D/Pods-Race2D-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Race2D/Pods-Race2D-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A892E9257ECBB800344AC0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		A6B4604079353F7688DA8B63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Race2D-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A01A2C12251BCEB100FAE38C /* Sources */ = {
@@ -411,9 +503,11 @@
 		};
 		A01A2C2B251BCEB200FAE38C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADA13FEB627AB25D46A101D8 /* Pods-Race2D.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 57M92R7JCQ;
 				INFOPLIST_FILE = Race2D/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -429,6 +523,7 @@
 		};
 		A01A2C2C251BCEB200FAE38C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 780A12907B981BC35D455227 /* Pods-Race2D.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

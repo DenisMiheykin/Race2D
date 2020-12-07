@@ -90,3 +90,8 @@ fastlane/test_output
 iOSInjectionProject/
 /Race2D.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 /Race2D.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+/Pods
+/Podfile.lock
+/Podfile
+/Race2D.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+/Race2D.xcworkspace/contents.xcworkspacedata
