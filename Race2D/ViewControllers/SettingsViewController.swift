@@ -22,6 +22,7 @@ class SettingsViewController: UIViewController {
     var barriersArray: [String] = []
     var indexCar = 0
     var indexBarrier = 0
+    var musicOff = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class SettingsViewController: UIViewController {
                                 self.speedTF.text ?? "5",
                                 self.carsArray[self.indexCar],
                                 self.barriersArray[self.indexBarrier],
-                                AudioPlayerManager.shared.musicOff)
+                                self.musicOff)
         UserDefaults.standard.set(encodable: settings, forKey: "settings")
         
         self.navigationController?.popViewController(animated: true)
@@ -77,9 +78,11 @@ class SettingsViewController: UIViewController {
     
     @IBAction func switchChanged(_ sender: UISwitch) {
         if let isPlaying = AudioPlayerManager.shared.playerBackground?.isPlaying, isPlaying {
-            AudioPlayerManager.shared.stopBackground(off: true)
+            AudioPlayerManager.shared.stopBackground()
+            self.musicOff = true
         } else {
-            AudioPlayerManager.shared.playSoundBack(musicOn: true)
+            AudioPlayerManager.shared.playSoundBack()
+            self.musicOff = false
         }
     }
 }
@@ -129,7 +132,8 @@ extension SettingsViewController {
                 self.indexBarrier = index
             }
             self.switchToggle.setOn(!settings.musicOff, animated: true)
-            AudioPlayerManager.shared.musicOff = settings.musicOff
+//            AudioPlayerManager.shared.musicOff = settings.musicOff
+            self.musicOff = settings.musicOff
         } else {
             let settings = Settings()
             self.userNameTF.text = settings.user

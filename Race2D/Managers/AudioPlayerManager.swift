@@ -9,29 +9,28 @@ class AudioPlayerManager {
     var musicOff = false
     
     private init() {}
- 
+    
+    func canPlay() -> Bool {
+        return !musicOff
+    }
+    
     func playSoundBack() {
         self.playBack(forResource: "soundBack", withExtension: "wav", numberOfLoops: -1)
-    }
-    
-    func playSoundBack(musicOn: Bool) {
-        self.musicOff = !musicOn
-        self.playSoundBack()
-    }
-    
-    func playClick() {
-        self.play(forResource: "click", withExtension: "wav")
     }
     
     func playDrive() {
         self.playBack(forResource: "drive", withExtension: "wav", numberOfLoops: -1)
     }
     
+    func playClick() {
+        self.play(forResource: "click", withExtension: "wav")
+    }
+    
     func playCrash() {
         self.play(forResource: "crash", withExtension: "wav")
     }
     
-    func play(forResource: String, withExtension: String, numberOfLoops: Int = 0) {
+    private func play(forResource: String, withExtension: String, numberOfLoops: Int = 0) {
         guard let url = Bundle.main.url(forResource: forResource, withExtension: withExtension) else { return }
         
         do {
@@ -48,10 +47,7 @@ class AudioPlayerManager {
         }
     }
     
-    func playBack(forResource: String, withExtension: String, numberOfLoops: Int = 0) {
-        if self.musicOff {
-            return
-        }
+    private func playBack(forResource: String, withExtension: String, numberOfLoops: Int = 0) {
         guard let url = Bundle.main.url(forResource: forResource, withExtension: withExtension) else { return }
         
         do {
@@ -84,10 +80,5 @@ class AudioPlayerManager {
     
     func stopBackground() {
         self.playerBackground?.stop()
-    }
-    
-    func stopBackground(off: Bool = false) {
-        self.stopBackground()
-        self.musicOff = off
     }
 }

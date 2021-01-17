@@ -14,36 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var settingsView: UIButton!
     @IBOutlet weak var scoreView: UIButton!
     
-    // MARK: - var
-    var settings = Settings()
-    
     // MARK: - lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //
-        let button = UIButton(type: .roundedRect)
-        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
-        button.setTitle("Crash", for: [])
-        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
-        view.addSubview(button)
-        //
-        
-        self.setupVariables()
         self.imageView.addParalaxEffect(amount: 100)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.loadSettings()
         self.setup()
     }
     
     // MARK: - IBActions
-    
-    @IBAction func crashButtonTapped(_ sender: AnyObject) {
-        fatalError()
-    }
-    
     @IBAction func buttonStart(_ sender: UIButton) {
         AudioPlayerManager.shared.playClick()
         guard let controller = UIStoryboard(name: "GameStoryboard", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as? GameViewController else {
@@ -72,20 +55,17 @@ class ViewController: UIViewController {
     private func setup() {
         self.setupShadowForButtons()
         self.setupFonts()
-        if !(AudioPlayerManager.shared.playerBackground?.isPlaying ?? false)  {
+//        if !(AudioPlayerManager.shared.playerBackground?.isPlaying ?? false)  {
+//            AudioPlayerManager.shared.playSoundBack()
+//        }
+        if AudioPlayerManager.shared.canPlay() && !(AudioPlayerManager.shared.playerBackground?.isPlaying ?? false) {
             AudioPlayerManager.shared.playSoundBack()
         }
     }
     
-    func setupVariables() {
-        self.loadSettings()
-        
-        AudioPlayerManager.shared.musicOff = settings.musicOff
-    }
-    
     func loadSettings() {
         if let settings = UserDefaults.standard.value(Settings.self, forKey: KeysUserDefaults.settings.rawValue) {
-            self.settings = settings
+            AudioPlayerManager.shared.musicOff = settings.musicOff
         }
     }
     
@@ -116,5 +96,4 @@ class ViewController: UIViewController {
         self.scoreView.titleLabel?.font = UIFont(name: "Copperplate", size: 50)
         
     }
-    
 }

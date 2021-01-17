@@ -74,7 +74,9 @@ class GameViewController: UIViewController {
     
     // MARK: - flow funcs
     private func setup() {
-        AudioPlayerManager.shared.playDrive()
+        if AudioPlayerManager.shared.canPlay() {
+            AudioPlayerManager.shared.playDrive()
+        }
         self.setupFonts()
     }
     
@@ -108,7 +110,9 @@ class GameViewController: UIViewController {
 private extension GameViewController {
     
     func setupVariables() {
-        self.loadSettings()
+        if let settings = UserDefaults.standard.value(Settings.self, forKey: KeysUserDefaults.settings.rawValue) {
+            self.settings = settings
+        }
         
         self.decorArray = loadDecorArray()
         self.barrierArray = loadBarrierArray()
@@ -117,12 +121,6 @@ private extension GameViewController {
             self.withDurationAnimations = speed
         }
         AudioPlayerManager.shared.musicOff = settings.musicOff
-    }
-    
-    func loadSettings() {
-        if let settings = UserDefaults.standard.value(Settings.self, forKey: KeysUserDefaults.settings.rawValue) {
-            self.settings = settings
-        }
     }
     
     func loadDecorArray() -> [Decor] {
@@ -139,7 +137,6 @@ private extension GameViewController {
     }
     
     func loadBarrierArray() -> [String] {
-//        return ["oil", "lumber", "boulder", "boulder2"]
         return [settings.barrier]
     }
     
@@ -217,7 +214,7 @@ private extension GameViewController {
     }
     
     func startCollisionСheckTimer() {
-        let сollisionСheckTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (сollisionСheckTimer) in
+        let сollisionСheckTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (сollisionСheckTimer) in
             if self.gameOver {
                 return
             }
@@ -244,11 +241,15 @@ private extension GameViewController {
     }
     
     func exitGame() {
-        let x = self.roadView.frame.size.width / 2 - 50
         let y = self.roadView.frame.size.height / 2 - 10
-        let gameOverLable = UILabel(frame: CGRect(x: x, y: y, width: 100, height: 20))
+        let gameOverLable = UILabel(frame: CGRect(x: 0, y: y, width: self.roadView.frame.size.width, height: 20))
         gameOverLable.text = "Game Over".localized
+        gameOverLable.textAlignment = .center
         self.roadView.addSubview(gameOverLable)
+        
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        gameOverLable.attributedText = NSAttributedString(string: gameOverLable.text ?? "", attributes: attributes)
+        gameOverLable.font = UIFont(name: "Copperplate", size: 20)
         
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (_) in
             self.navigationController?.popViewController(animated: true)
@@ -543,10 +544,7 @@ private extension GameViewController {
     func localization() {
         self.backButton.setTitle("Back".localized, for: .normal)
         self.leftButton.setTitle("LEFT".localized, for: .normal)
-        print(self.rightButton.titleLabel?.text ?? "")
-        print(self.rightButton.titleLabel?.text?.localized ?? "")
-        self.rightButton.setTitle(self.rightButton.titleLabel?.text?.localized, for: .normal) // Почему не локализует?
-        print(self.rightButton.titleLabel?.text ?? "")
+        self.rightButton.setTitle("RIGHT".localized, for: .normal)
         self.race2DLabel.text = self.race2DLabel.text?.localized
     }
 }

@@ -131,24 +131,14 @@
 			children = (
 				A0590BED255C5367001E378D /* Cells */,
 				A01A2C19251BCEB100FAE38C /* AppDelegate.swift */,
-				A01A2C1D251BCEB100FAE38C /* ViewController.swift */,
-				A01A2C33251BD2FA00FAE38C /* GameViewController.swift */,
-				A01A2C35251BD30700FAE38C /* SettingsViewController.swift */,
-				A01A2C37251BD31300FAE38C /* ScoreViewController.swift */,
+				A052C16325B4C85900F3FE04 /* ViewControllers */,
 				A01A2C1F251BCEB100FAE38C /* Main.storyboard */,
 				A0029365256EBF12009FF800 /* GameStoryboard.storyboard */,
 				A0029372256EDF6B009FF800 /* SettingsStoryboard.storyboard */,
 				A01A2C31251BD2D700FAE38C /* ScoreStoryboard.storyboard */,
-				A02A6C06252E2206004C57F6 /* Decor.swift */,
-				A0AAE4FF2542357A00541B25 /* Car.swift */,
-				A0F579C92545B767000B23F9 /* RaceResult.swift */,
-				A0AAE4D72541E1C300541B25 /* Settings.swift */,
-				A071C72C256AEDAA005661CD /* AudioPlayerManager.swift */,
-				A0AAE4FD2542259D00541B25 /* ExtensionUIView.swift */,
-				A0F579C7254588C5000B23F9 /* ExtensionUserDefaults.swift */,
-				A00B638225449E7D00D596DC /* ExtensionUIViewController.swift */,
-				A0029375256EED07009FF800 /* ExtensionDate .swift */,
-				A002936E256EC103009FF800 /* ExtensionString.swift */,
+				A052C16425B4C87700F3FE04 /* Models */,
+				A052C16525B4C88900F3FE04 /* Managers */,
+				A052C16625B4C89900F3FE04 /* Extensions */,
 				A002936C256EC066009FF800 /* Localizable.strings */,
 				A01A2C22251BCEB200FAE38C /* Assets.xcassets */,
 				A01A2C24251BCEB200FAE38C /* LaunchScreen.storyboard */,
@@ -160,6 +150,48 @@
 				A071C730256B045F005661CD /* crash.wav */,
 			);
 			path = Race2D;
+			sourceTree = "<group>";
+		};
+		A052C16325B4C85900F3FE04 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A01A2C1D251BCEB100FAE38C /* ViewController.swift */,
+				A01A2C33251BD2FA00FAE38C /* GameViewController.swift */,
+				A01A2C35251BD30700FAE38C /* SettingsViewController.swift */,
+				A01A2C37251BD31300FAE38C /* ScoreViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A052C16425B4C87700F3FE04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A02A6C06252E2206004C57F6 /* Decor.swift */,
+				A0AAE4FF2542357A00541B25 /* Car.swift */,
+				A0F579C92545B767000B23F9 /* RaceResult.swift */,
+				A0AAE4D72541E1C300541B25 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A052C16525B4C88900F3FE04 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A071C72C256AEDAA005661CD /* AudioPlayerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A052C16625B4C89900F3FE04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0AAE4FD2542259D00541B25 /* ExtensionUIView.swift */,
+				A0F579C7254588C5000B23F9 /* ExtensionUserDefaults.swift */,
+				A00B638225449E7D00D596DC /* ExtensionUIViewController.swift */,
+				A0029375256EED07009FF800 /* ExtensionDate .swift */,
+				A002936E256EC103009FF800 /* ExtensionString.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A0590BED255C5367001E378D /* Cells */ = {

@@ -38,13 +38,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-x9-7wj" userLabel="userLabel">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="220.5" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scoreLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvh-UT-zX0" userLabel="scoreLabel">
-                                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scoreLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvh-UT-zX0" userLabel="scoreLabel">
+                                                                    <rect key="frame" x="220.5" y="0.0" width="154.5" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="Yvh-UT-zX0" secondAttribute="bottom" id="6mW-8u-ILV"/>
                                                                 <constraint firstItem="4qF-x9-7wj" firstAttribute="leading" secondItem="Fl9-cE-28c" secondAttribute="leading" id="HAq-6j-MXc"/>
-                                                                <constraint firstItem="Yvh-UT-zX0" firstAttribute="width" secondItem="4qF-x9-7wj" secondAttribute="width" id="Joc-TY-s6K"/>
+                                                                <constraint firstItem="Yvh-UT-zX0" firstAttribute="width" secondItem="4qF-x9-7wj" secondAttribute="width" multiplier="0.7" id="Joc-TY-s6K"/>
                                                                 <constraint firstItem="Yvh-UT-zX0" firstAttribute="top" secondItem="Fl9-cE-28c" secondAttribute="top" id="Xev-3g-2cw"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Yvh-UT-zX0" secondAttribute="trailing" id="dYU-E2-UxI"/>
                                                                 <constraint firstAttribute="bottom" secondItem="4qF-x9-7wj" secondAttribute="bottom" id="lsd-QZ-dRj"/>
@@ -66,13 +66,13 @@
                                                             <rect key="frame" x="0.0" y="30" width="375" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v27-Gf-jzt" userLabel="dateLabel">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="220.5" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speedLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cU-fE-d3j">
-                                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speedLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cU-fE-d3j">
+                                                                    <rect key="frame" x="220.5" y="0.0" width="154.5" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                                                                 <constraint firstItem="9cU-fE-d3j" firstAttribute="leading" secondItem="v27-Gf-jzt" secondAttribute="trailing" id="KDH-ux-qzK"/>
                                                                 <constraint firstItem="v27-Gf-jzt" firstAttribute="top" secondItem="wXf-kQ-psw" secondAttribute="top" id="Stm-zt-k2k"/>
                                                                 <constraint firstAttribute="trailing" secondItem="9cU-fE-d3j" secondAttribute="trailing" id="XAS-uh-SFU"/>
-                                                                <constraint firstItem="9cU-fE-d3j" firstAttribute="width" secondItem="v27-Gf-jzt" secondAttribute="width" id="bL1-6n-ail"/>
+                                                                <constraint firstItem="9cU-fE-d3j" firstAttribute="width" secondItem="v27-Gf-jzt" secondAttribute="width" multiplier="0.7" id="bL1-6n-ail"/>
                                                                 <constraint firstItem="v27-Gf-jzt" firstAttribute="leading" secondItem="wXf-kQ-psw" secondAttribute="leading" id="jEz-mc-QV9"/>
                                                                 <constraint firstItem="9cU-fE-d3j" firstAttribute="top" secondItem="wXf-kQ-psw" secondAttribute="top" id="rD3-OV-3Fb"/>
                                                                 <constraint firstAttribute="bottom" secondItem="9cU-fE-d3j" secondAttribute="bottom" id="sRH-g0-F2y"/>
