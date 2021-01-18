@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var switchToggle: UISwitch!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     // MARK: - var
     var carsArray: [Car] = []
@@ -27,6 +28,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
+        self.registerForKeyboardNotifications()
     }
     
     // MARK: - lifecycle funcs
@@ -85,9 +87,39 @@ class SettingsViewController: UIViewController {
             self.musicOff = false
         }
     }
+    
+    // MARK: - flow funcs
+    private func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(_ notification: NSNotification) {
+        let userInfo = notification.userInfo!
+        let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            self.bottomConstraint.constant = 0
+        } else {
+            self.bottomConstraint.constant = keyboardScreenEndFrame.height
+        }
+        
+        view.needsUpdateConstraints()
+        
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 // MARK: - extension
+extension SettingsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+
 extension SettingsViewController {
     
     func loadData() {
